@@ -10,9 +10,12 @@ using System.Windows.Forms;
 
 namespace MovieBonanza
 {
-    public partial class Form1 : Form
+    public partial class SelectionForm : Form
     {
-        public Form1()
+        // Create a reference to the previous form
+        public Form previousForm;
+
+        public SelectionForm()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace MovieBonanza
 {
-    partial class Form1
+    partial class SelectionForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.SuspendLayout();
+            // 
+            // SelectionForm
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(704, 411);
+            this.Name = "SelectionForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Movie Bonanza - Your Online Streaming Service";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
