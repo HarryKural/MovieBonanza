@@ -106,6 +106,7 @@
             this.StreamToolStripMenuItem.Name = "StreamToolStripMenuItem";
             this.StreamToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.StreamToolStripMenuItem.Text = "Strea&m";
+            this.StreamToolStripMenuItem.Click += new System.EventHandler(this.StreamToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -355,8 +356,10 @@
             this.StreamButton.Name = "StreamButton";
             this.StreamButton.Size = new System.Drawing.Size(73, 27);
             this.StreamButton.TabIndex = 7;
+            this.StreamButton.Tag = "Stream";
             this.StreamButton.Text = "Stream";
             this.StreamButton.UseVisualStyleBackColor = false;
+            this.StreamButton.Click += new System.EventHandler(this._buttonClickHandler);
             // 
             // OrderForm
             // 

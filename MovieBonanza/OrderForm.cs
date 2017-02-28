@@ -27,7 +27,9 @@ namespace MovieBonanza
             switch (ClickHandler.Tag.ToString())
             {
                 case "Stream":
-
+                    StreamForm streamForm = new StreamForm();
+                    streamForm.Show();
+                    this.Hide();
                     break;
 
                 case "Cancel":
@@ -64,6 +66,11 @@ namespace MovieBonanza
 
             // Step 2. Show the About Form with Show Dialog (a model method to display the form)
             aboutForm.ShowDialog();
+        }
+
+        private void StreamToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.StreamButton.PerformClick();
         }
     }
 }
