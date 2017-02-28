@@ -22,6 +22,7 @@ namespace MovieBonanza
 
         private void _currentMoviesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            this.NextButton.Enabled = true;
             TitleTextBox.Text = CurrentMoviesListBox.Text.ToString();
             _setInfo();
         }
@@ -58,10 +59,10 @@ namespace MovieBonanza
                 CategoryTextBox.Text = "Horror";
             }
             else
-            { 
+            {
                 CategoryTextBox.Text = "Action";
             }
-            
+
 
             /// <summary>
             /// Sets costs

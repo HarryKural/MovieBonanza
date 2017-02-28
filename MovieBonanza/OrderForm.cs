@@ -19,5 +19,42 @@ namespace MovieBonanza
         {
             InitializeComponent();
         }
+
+        private void _buttonClickHandler(object sender, EventArgs e)
+        {
+            Button ClickHandler = sender as Button;
+
+            switch (ClickHandler.Tag.ToString())
+            {
+                case "Stream":
+
+                    break;
+
+                case "Cancel":
+                    // showing up confirm message when cancel button clicked
+                    DialogResult result = MessageBox.Show("Are You Sure you want to exit?", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.OK)
+                    {
+                        Application.Exit();
+                    }
+                    break;
+
+                case "Back":
+                    previousForm.Show();
+                    this.Hide();
+                    break;
+            }
+        }
+
+        private void CancelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.CancelButton.PerformClick();
+        }
+
+        private void PrintToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Printing... Your ticket is in process.", "Print", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

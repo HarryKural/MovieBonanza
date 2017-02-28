@@ -183,6 +183,7 @@
             // NextButton
             // 
             this.NextButton.BackColor = System.Drawing.Color.White;
+            this.NextButton.Enabled = false;
             this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.NextButton.Location = new System.Drawing.Point(582, 357);
             this.NextButton.Name = "NextButton";
