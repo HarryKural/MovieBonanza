@@ -56,5 +56,14 @@ namespace MovieBonanza
         {
             MessageBox.Show("Printing... Your ticket is in process.", "Print", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Step 1. Create a new Form
+            AboutForm aboutForm = new AboutForm();
+
+            // Step 2. Show the About Form with Show Dialog (a model method to display the form)
+            aboutForm.ShowDialog();
+        }
     }
 }
