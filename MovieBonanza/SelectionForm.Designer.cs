@@ -32,14 +32,14 @@
             this.CurrentMoviesLabel = new System.Windows.Forms.Label();
             this.CurrentMoviesListBox = new System.Windows.Forms.ListBox();
             this.YourSelectionGroupBox = new System.Windows.Forms.GroupBox();
-            this.YourSelectionPictureBox = new System.Windows.Forms.PictureBox();
-            this.TitleLabel = new System.Windows.Forms.Label();
-            this.TitleTextBox = new System.Windows.Forms.TextBox();
-            this.CategoryLabel = new System.Windows.Forms.Label();
-            this.CategoryTextBox = new System.Windows.Forms.TextBox();
-            this.CostLabel = new System.Windows.Forms.Label();
             this.CostTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.CostLabel = new System.Windows.Forms.Label();
+            this.CategoryTextBox = new System.Windows.Forms.TextBox();
+            this.CategoryLabel = new System.Windows.Forms.Label();
+            this.TitleTextBox = new System.Windows.Forms.TextBox();
+            this.TitleLabel = new System.Windows.Forms.Label();
+            this.YourSelectionPictureBox = new System.Windows.Forms.PictureBox();
+            this.NextButton = new System.Windows.Forms.Button();
             this.YourSelectionGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.YourSelectionPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -93,6 +93,7 @@
             this.CurrentMoviesListBox.Size = new System.Drawing.Size(133, 277);
             this.CurrentMoviesListBox.Sorted = true;
             this.CurrentMoviesListBox.TabIndex = 2;
+            this.CurrentMoviesListBox.SelectedIndexChanged += new System.EventHandler(this._currentMoviesListBox_SelectedIndexChanged);
             // 
             // YourSelectionGroupBox
             // 
@@ -111,42 +112,24 @@
             this.YourSelectionGroupBox.TabStop = false;
             this.YourSelectionGroupBox.Text = "Your Selection";
             // 
-            // YourSelectionPictureBox
+            // CostTextBox
             // 
-            this.YourSelectionPictureBox.BackColor = System.Drawing.Color.White;
-            this.YourSelectionPictureBox.Location = new System.Drawing.Point(23, 22);
-            this.YourSelectionPictureBox.Name = "YourSelectionPictureBox";
-            this.YourSelectionPictureBox.Size = new System.Drawing.Size(105, 136);
-            this.YourSelectionPictureBox.TabIndex = 0;
-            this.YourSelectionPictureBox.TabStop = false;
+            this.CostTextBox.BackColor = System.Drawing.Color.White;
+            this.CostTextBox.ForeColor = System.Drawing.Color.Black;
+            this.CostTextBox.Location = new System.Drawing.Point(321, 135);
+            this.CostTextBox.Name = "CostTextBox";
+            this.CostTextBox.ReadOnly = true;
+            this.CostTextBox.Size = new System.Drawing.Size(74, 23);
+            this.CostTextBox.TabIndex = 6;
             // 
-            // TitleLabel
+            // CostLabel
             // 
-            this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Location = new System.Drawing.Point(158, 22);
-            this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(35, 17);
-            this.TitleLabel.TabIndex = 1;
-            this.TitleLabel.Text = "Title";
-            // 
-            // TitleTextBox
-            // 
-            this.TitleTextBox.BackColor = System.Drawing.Color.White;
-            this.TitleTextBox.ForeColor = System.Drawing.Color.Black;
-            this.TitleTextBox.Location = new System.Drawing.Point(161, 43);
-            this.TitleTextBox.Name = "TitleTextBox";
-            this.TitleTextBox.ReadOnly = true;
-            this.TitleTextBox.Size = new System.Drawing.Size(234, 23);
-            this.TitleTextBox.TabIndex = 2;
-            // 
-            // CategoryLabel
-            // 
-            this.CategoryLabel.AutoSize = true;
-            this.CategoryLabel.Location = new System.Drawing.Point(161, 114);
-            this.CategoryLabel.Name = "CategoryLabel";
-            this.CategoryLabel.Size = new System.Drawing.Size(65, 17);
-            this.CategoryLabel.TabIndex = 3;
-            this.CategoryLabel.Text = "Category";
+            this.CostLabel.AutoSize = true;
+            this.CostLabel.Location = new System.Drawing.Point(318, 114);
+            this.CostLabel.Name = "CostLabel";
+            this.CostLabel.Size = new System.Drawing.Size(36, 17);
+            this.CostLabel.TabIndex = 5;
+            this.CostLabel.Text = "Cost";
             // 
             // CategoryTextBox
             // 
@@ -158,48 +141,73 @@
             this.CategoryTextBox.Size = new System.Drawing.Size(136, 23);
             this.CategoryTextBox.TabIndex = 4;
             // 
-            // CostLabel
+            // CategoryLabel
             // 
-            this.CostLabel.AutoSize = true;
-            this.CostLabel.Location = new System.Drawing.Point(318, 114);
-            this.CostLabel.Name = "CostLabel";
-            this.CostLabel.Size = new System.Drawing.Size(36, 17);
-            this.CostLabel.TabIndex = 5;
-            this.CostLabel.Text = "Cost";
+            this.CategoryLabel.AutoSize = true;
+            this.CategoryLabel.Location = new System.Drawing.Point(161, 114);
+            this.CategoryLabel.Name = "CategoryLabel";
+            this.CategoryLabel.Size = new System.Drawing.Size(65, 17);
+            this.CategoryLabel.TabIndex = 3;
+            this.CategoryLabel.Text = "Category";
             // 
-            // CostTextBox
+            // TitleTextBox
             // 
-            this.CostTextBox.BackColor = System.Drawing.Color.White;
-            this.CostTextBox.ForeColor = System.Drawing.Color.Black;
-            this.CostTextBox.Location = new System.Drawing.Point(321, 135);
-            this.CostTextBox.Name = "CostTextBox";
-            this.CostTextBox.ReadOnly = true;
-            this.CostTextBox.Size = new System.Drawing.Size(74, 23);
-            this.CostTextBox.TabIndex = 6;
+            this.TitleTextBox.BackColor = System.Drawing.Color.White;
+            this.TitleTextBox.ForeColor = System.Drawing.Color.Black;
+            this.TitleTextBox.Location = new System.Drawing.Point(161, 43);
+            this.TitleTextBox.Name = "TitleTextBox";
+            this.TitleTextBox.ReadOnly = true;
+            this.TitleTextBox.Size = new System.Drawing.Size(234, 23);
+            this.TitleTextBox.TabIndex = 2;
             // 
-            // button1
+            // TitleLabel
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Location = new System.Drawing.Point(582, 357);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(73, 27);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Next";
-            this.button1.UseVisualStyleBackColor = false;
+            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.Location = new System.Drawing.Point(158, 22);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(35, 17);
+            this.TitleLabel.TabIndex = 1;
+            this.TitleLabel.Text = "Title";
+            // 
+            // YourSelectionPictureBox
+            // 
+            this.YourSelectionPictureBox.BackColor = System.Drawing.Color.White;
+            this.YourSelectionPictureBox.InitialImage = null;
+            this.YourSelectionPictureBox.Location = new System.Drawing.Point(23, 22);
+            this.YourSelectionPictureBox.Name = "YourSelectionPictureBox";
+            this.YourSelectionPictureBox.Size = new System.Drawing.Size(105, 136);
+            this.YourSelectionPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.YourSelectionPictureBox.TabIndex = 0;
+            this.YourSelectionPictureBox.TabStop = false;
+            // 
+            // NextButton
+            // 
+            this.NextButton.BackColor = System.Drawing.Color.White;
+            this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NextButton.Location = new System.Drawing.Point(582, 357);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(73, 27);
+            this.NextButton.TabIndex = 4;
+            this.NextButton.Text = "Next";
+            this.NextButton.UseVisualStyleBackColor = false;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // SelectionForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(704, 411);
-            this.Controls.Add(this.button1);
+            this.ControlBox = false;
+            this.Controls.Add(this.NextButton);
             this.Controls.Add(this.YourSelectionGroupBox);
             this.Controls.Add(this.CurrentMoviesListBox);
             this.Controls.Add(this.CurrentMoviesLabel);
             this.Controls.Add(this.ChooseLabel);
             this.ForeColor = System.Drawing.Color.Black;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SelectionForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Bonanza - Your Online Streaming Service";
             this.YourSelectionGroupBox.ResumeLayout(false);
@@ -223,7 +231,7 @@
         private System.Windows.Forms.Label CategoryLabel;
         private System.Windows.Forms.Label CostLabel;
         private System.Windows.Forms.TextBox CostTextBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button NextButton;
     }
 }
 
