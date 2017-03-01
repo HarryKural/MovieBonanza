@@ -58,6 +58,7 @@
             this.BackButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.StreamButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.OrderFormMenuStrip.SuspendLayout();
             this.MovieSelectedGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.YourOrderPictureBox)).BeginInit();
@@ -200,6 +201,7 @@
             // 
             // YourOrderGroupBox
             // 
+            this.YourOrderGroupBox.Controls.Add(this.label1);
             this.YourOrderGroupBox.Controls.Add(this.DVDChargesTextBox);
             this.YourOrderGroupBox.Controls.Add(this.DVDChargesLabel);
             this.YourOrderGroupBox.Controls.Add(this.DVDChargesCheckBox);
@@ -222,7 +224,7 @@
             // 
             this.DVDChargesTextBox.BackColor = System.Drawing.Color.White;
             this.DVDChargesTextBox.ForeColor = System.Drawing.Color.Black;
-            this.DVDChargesTextBox.Location = new System.Drawing.Point(134, 77);
+            this.DVDChargesTextBox.Location = new System.Drawing.Point(134, 75);
             this.DVDChargesTextBox.Name = "DVDChargesTextBox";
             this.DVDChargesTextBox.ReadOnly = true;
             this.DVDChargesTextBox.Size = new System.Drawing.Size(100, 23);
@@ -232,7 +234,7 @@
             // DVDChargesLabel
             // 
             this.DVDChargesLabel.AutoSize = true;
-            this.DVDChargesLabel.Location = new System.Drawing.Point(34, 80);
+            this.DVDChargesLabel.Location = new System.Drawing.Point(34, 78);
             this.DVDChargesLabel.Name = "DVDChargesLabel";
             this.DVDChargesLabel.Size = new System.Drawing.Size(94, 17);
             this.DVDChargesLabel.TabIndex = 18;
@@ -254,7 +256,7 @@
             // 
             this.GrandTotalTextBox.BackColor = System.Drawing.Color.White;
             this.GrandTotalTextBox.ForeColor = System.Drawing.Color.Black;
-            this.GrandTotalTextBox.Location = new System.Drawing.Point(134, 182);
+            this.GrandTotalTextBox.Location = new System.Drawing.Point(134, 190);
             this.GrandTotalTextBox.Name = "GrandTotalTextBox";
             this.GrandTotalTextBox.ReadOnly = true;
             this.GrandTotalTextBox.Size = new System.Drawing.Size(100, 23);
@@ -263,7 +265,7 @@
             // GrandTotalLabel
             // 
             this.GrandTotalLabel.AutoSize = true;
-            this.GrandTotalLabel.Location = new System.Drawing.Point(44, 185);
+            this.GrandTotalLabel.Location = new System.Drawing.Point(44, 193);
             this.GrandTotalLabel.Name = "GrandTotalLabel";
             this.GrandTotalLabel.Size = new System.Drawing.Size(84, 17);
             this.GrandTotalLabel.TabIndex = 15;
@@ -273,7 +275,7 @@
             // 
             this.SalesTaxTextBox.BackColor = System.Drawing.Color.White;
             this.SalesTaxTextBox.ForeColor = System.Drawing.Color.Black;
-            this.SalesTaxTextBox.Location = new System.Drawing.Point(134, 150);
+            this.SalesTaxTextBox.Location = new System.Drawing.Point(134, 158);
             this.SalesTaxTextBox.Name = "SalesTaxTextBox";
             this.SalesTaxTextBox.ReadOnly = true;
             this.SalesTaxTextBox.Size = new System.Drawing.Size(100, 23);
@@ -282,7 +284,7 @@
             // SalesTaxLabel
             // 
             this.SalesTaxLabel.AutoSize = true;
-            this.SalesTaxLabel.Location = new System.Drawing.Point(16, 153);
+            this.SalesTaxLabel.Location = new System.Drawing.Point(16, 161);
             this.SalesTaxLabel.Name = "SalesTaxLabel";
             this.SalesTaxLabel.Size = new System.Drawing.Size(112, 17);
             this.SalesTaxLabel.TabIndex = 13;
@@ -292,7 +294,7 @@
             // 
             this.SubTotalTextBox.BackColor = System.Drawing.Color.White;
             this.SubTotalTextBox.ForeColor = System.Drawing.Color.Black;
-            this.SubTotalTextBox.Location = new System.Drawing.Point(134, 108);
+            this.SubTotalTextBox.Location = new System.Drawing.Point(134, 106);
             this.SubTotalTextBox.Name = "SubTotalTextBox";
             this.SubTotalTextBox.ReadOnly = true;
             this.SubTotalTextBox.Size = new System.Drawing.Size(100, 23);
@@ -301,7 +303,7 @@
             // SubTotalLabel
             // 
             this.SubTotalLabel.AutoSize = true;
-            this.SubTotalLabel.Location = new System.Drawing.Point(59, 111);
+            this.SubTotalLabel.Location = new System.Drawing.Point(59, 109);
             this.SubTotalLabel.Name = "SubTotalLabel";
             this.SubTotalLabel.Size = new System.Drawing.Size(65, 17);
             this.SubTotalLabel.TabIndex = 11;
@@ -311,7 +313,7 @@
             // 
             this.CostTextBox.BackColor = System.Drawing.Color.White;
             this.CostTextBox.ForeColor = System.Drawing.Color.Black;
-            this.CostTextBox.Location = new System.Drawing.Point(134, 45);
+            this.CostTextBox.Location = new System.Drawing.Point(134, 43);
             this.CostTextBox.Name = "CostTextBox";
             this.CostTextBox.ReadOnly = true;
             this.CostTextBox.Size = new System.Drawing.Size(100, 23);
@@ -320,7 +322,7 @@
             // CostLabel
             // 
             this.CostLabel.AutoSize = true;
-            this.CostLabel.Location = new System.Drawing.Point(92, 48);
+            this.CostLabel.Location = new System.Drawing.Point(92, 46);
             this.CostLabel.Name = "CostLabel";
             this.CostLabel.Size = new System.Drawing.Size(36, 17);
             this.CostLabel.TabIndex = 9;
@@ -364,6 +366,14 @@
             this.StreamButton.Text = "Stream";
             this.StreamButton.UseVisualStyleBackColor = false;
             this.StreamButton.Click += new System.EventHandler(this._buttonClickHandler);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(133, 129);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 22);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "______________";
             // 
             // OrderForm
             // 
@@ -430,5 +440,6 @@
         private System.Windows.Forms.Button StreamButton;
         private System.Windows.Forms.TextBox DVDChargesTextBox;
         private System.Windows.Forms.Label DVDChargesLabel;
+        private System.Windows.Forms.Label label1;
     }
 }

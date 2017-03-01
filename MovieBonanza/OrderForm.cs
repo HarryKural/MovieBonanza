@@ -15,7 +15,7 @@ namespace MovieBonanza
         // Create a reference to the previous form
         public SelectionForm previousForm { get; set; }
         
-        public string title { get; set; }
+        public static string title { get; set; }
 
         public string category { get; set; }
 
@@ -47,6 +47,9 @@ namespace MovieBonanza
                 case "Stream":
                     StreamForm streamForm = new StreamForm();
                     streamForm.Show();
+                    streamForm.grandTotal = GrandTotalTextBox.Text;
+                    title = TitleTextBox.Text;
+                    streamForm.info();
                     this.Hide();
                     break;
 

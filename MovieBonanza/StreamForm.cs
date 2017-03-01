@@ -12,10 +12,17 @@ namespace MovieBonanza
 {
     public partial class StreamForm : Form
     {
+        public string grandTotal { get; set; }
 
         public StreamForm()
         {
             InitializeComponent();
+        }
+
+        public void info()
+        {
+            GrandTotalLabel.Text = grandTotal;
+            YourMovieLabel.Text = OrderForm.title;
         }
 
         private void OKButton_Click(object sender, EventArgs e)
