@@ -63,6 +63,16 @@ namespace MovieBonanza.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AboutFormLogo {
+            get {
+                object obj = ResourceManager.GetObject("AboutFormLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CedarRapids {
             get {
                 object obj = ResourceManager.GetObject("CedarRapids", resourceCulture);
@@ -166,6 +176,16 @@ namespace MovieBonanza.Properties {
         internal static System.Drawing.Bitmap SeasonOfTheWitch {
             get {
                 object obj = ResourceManager.GetObject("SeasonOfTheWitch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SplashFormLogo {
+            get {
+                object obj = ResourceManager.GetObject("SplashFormLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
