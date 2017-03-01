@@ -205,6 +205,7 @@
             this.Controls.Add(this.CurrentMoviesLabel);
             this.Controls.Add(this.ChooseLabel);
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SelectionForm";

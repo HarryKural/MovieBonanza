@@ -44,6 +44,7 @@
             this.TitleTextBox = new System.Windows.Forms.TextBox();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.YourOrderGroupBox = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.DVDChargesTextBox = new System.Windows.Forms.TextBox();
             this.DVDChargesLabel = new System.Windows.Forms.Label();
             this.DVDChargesCheckBox = new System.Windows.Forms.CheckBox();
@@ -58,7 +59,6 @@
             this.BackButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.StreamButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.OrderFormMenuStrip.SuspendLayout();
             this.MovieSelectedGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.YourOrderPictureBox)).BeginInit();
@@ -220,6 +220,14 @@
             this.YourOrderGroupBox.TabStop = false;
             this.YourOrderGroupBox.Text = "Your Order";
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(133, 129);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 22);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "______________";
+            // 
             // DVDChargesTextBox
             // 
             this.DVDChargesTextBox.BackColor = System.Drawing.Color.White;
@@ -367,14 +375,6 @@
             this.StreamButton.UseVisualStyleBackColor = false;
             this.StreamButton.Click += new System.EventHandler(this._buttonClickHandler);
             // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(133, 129);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 22);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "______________";
-            // 
             // OrderForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -389,6 +389,7 @@
             this.Controls.Add(this.OrderFormMenuStrip);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.OrderFormMenuStrip;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
