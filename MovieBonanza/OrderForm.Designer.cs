@@ -227,6 +227,7 @@
             this.DVDChargesTextBox.ReadOnly = true;
             this.DVDChargesTextBox.Size = new System.Drawing.Size(100, 23);
             this.DVDChargesTextBox.TabIndex = 19;
+            this.DVDChargesTextBox.Visible = false;
             // 
             // DVDChargesLabel
             // 
@@ -236,6 +237,7 @@
             this.DVDChargesLabel.Size = new System.Drawing.Size(94, 17);
             this.DVDChargesLabel.TabIndex = 18;
             this.DVDChargesLabel.Text = "DVD Charges";
+            this.DVDChargesLabel.Visible = false;
             // 
             // DVDChargesCheckBox
             // 
@@ -246,6 +248,7 @@
             this.DVDChargesCheckBox.TabIndex = 17;
             this.DVDChargesCheckBox.Text = "Order the DVD (adds $10.00 to your order)";
             this.DVDChargesCheckBox.UseVisualStyleBackColor = true;
+            this.DVDChargesCheckBox.CheckedChanged += new System.EventHandler(this.DVDChargesCheckBox_CheckedChanged);
             // 
             // GrandTotalTextBox
             // 

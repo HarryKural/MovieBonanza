@@ -35,6 +35,7 @@ namespace MovieBonanza
             CategoryTextBox.Text = category;
             CostTextBox.Text = cost;
             YourOrderPictureBox.Image = image;
+            _calculateTotal(DVDChargesCheckBox.Checked);
         }
 
         private void _buttonClickHandler(object sender, EventArgs e)
@@ -89,6 +90,41 @@ namespace MovieBonanza
         {
             this.StreamButton.PerformClick();
         }
-        
+
+        private void _calculateTotal(bool DVDCharges)
+        {
+            if (DVDCharges)
+            {
+                DVDChargesLabel.Visible = true;
+                DVDChargesTextBox.Visible = true;
+
+                double subTotal = Double.Parse(cost.Replace("$", "")) + 10.00;
+                double salesTax = subTotal * 0.13;
+                double grandTotal = subTotal + salesTax;
+
+                DVDChargesTextBox.Text = "$ 10.00";
+                SubTotalTextBox.Text = "$ " + subTotal.ToString();
+                SalesTaxTextBox.Text = "$ " + Math.Round(salesTax, 2).ToString();
+                GrandTotalTextBox.Text = "$ " + Math.Round(grandTotal, 2).ToString();
+            }
+            else
+            {
+                DVDChargesLabel.Visible = false;
+                DVDChargesTextBox.Visible = false;
+
+                double subTotal = Double.Parse(cost.Replace("$", ""));
+                double salesTax = subTotal * 0.13;
+                double grandTotal = subTotal + salesTax;
+
+                SubTotalTextBox.Text = "$ " + subTotal.ToString();
+                SalesTaxTextBox.Text = "$ " + Math.Round(salesTax, 2).ToString();
+                GrandTotalTextBox.Text = "$ " + Math.Round(grandTotal, 2).ToString();
+            }
+        }
+
+        private void DVDChargesCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            this._calculateTotal(DVDChargesCheckBox.Checked);
+        }
     }
 }

@@ -14,9 +14,7 @@ namespace MovieBonanza
     {
         // Create a reference to the previous form
         public Form previousForm;
-
-        //List<string> userSelection = new List<string>();
-
+        
         public static string title;
 
         public static string category;
@@ -176,13 +174,6 @@ namespace MovieBonanza
                 YourSelectionPictureBox.Image = Properties.Resources.RealSteel;
             }
         }
-
-        //private void _saveUserSelection()
-        //{
-        //    userSelection.Add(TitleTextBox.Text);
-        //    userSelection.Add(CategoryTextBox.Text);
-        //    userSelection.Add(CostTextBox.Text);
-        //}
 
         private void NextButton_Click(object sender, EventArgs e)
         {

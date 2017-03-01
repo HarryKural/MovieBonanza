@@ -12,6 +12,7 @@ namespace MovieBonanza
 {
     public partial class StreamForm : Form
     {
+
         public StreamForm()
         {
             InitializeComponent();
