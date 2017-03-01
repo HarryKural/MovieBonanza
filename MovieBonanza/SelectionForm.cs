@@ -15,6 +15,14 @@ namespace MovieBonanza
         // Create a reference to the previous form
         public Form previousForm;
 
+        //List<string> userSelection = new List<string>();
+
+        public static string title;
+
+        public static string category;
+
+        public static string cost;
+
         public SelectionForm()
         {
             InitializeComponent();
@@ -169,6 +177,13 @@ namespace MovieBonanza
             }
         }
 
+        //private void _saveUserSelection()
+        //{
+        //    userSelection.Add(TitleTextBox.Text);
+        //    userSelection.Add(CategoryTextBox.Text);
+        //    userSelection.Add(CostTextBox.Text);
+        //}
+
         private void NextButton_Click(object sender, EventArgs e)
         {
             // Instantiate an object to the next form
@@ -176,6 +191,12 @@ namespace MovieBonanza
 
             // Pass a reference to the current form to the next form
             orderForm.previousForm = this;
+
+            orderForm.title = TitleTextBox.Text;
+            orderForm.category = CategoryTextBox.Text;
+            orderForm.cost = CostTextBox.Text;
+            orderForm.image = YourSelectionPictureBox.Image;
+            orderForm.setInfo();
 
             // Show the next form
             orderForm.Show();

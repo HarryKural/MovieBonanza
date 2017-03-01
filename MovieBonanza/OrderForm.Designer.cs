@@ -44,9 +44,9 @@
             this.TitleTextBox = new System.Windows.Forms.TextBox();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.YourOrderGroupBox = new System.Windows.Forms.GroupBox();
-            this.AdditionalChargeTextBox = new System.Windows.Forms.TextBox();
-            this.AdditionalChargeLabel = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.DVDChargesTextBox = new System.Windows.Forms.TextBox();
+            this.DVDChargesLabel = new System.Windows.Forms.Label();
+            this.DVDChargesCheckBox = new System.Windows.Forms.CheckBox();
             this.GrandTotalTextBox = new System.Windows.Forms.TextBox();
             this.GrandTotalLabel = new System.Windows.Forms.Label();
             this.SalesTaxTextBox = new System.Windows.Forms.TextBox();
@@ -91,7 +91,7 @@
             // PrintToolStripMenuItem
             // 
             this.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem";
-            this.PrintToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.PrintToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
             this.PrintToolStripMenuItem.Tag = "";
             this.PrintToolStripMenuItem.Text = "&Print";
             this.PrintToolStripMenuItem.Click += new System.EventHandler(this.PrintToolStripMenuItem_Click);
@@ -99,24 +99,24 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(118, 6);
             // 
             // StreamToolStripMenuItem
             // 
             this.StreamToolStripMenuItem.Name = "StreamToolStripMenuItem";
-            this.StreamToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.StreamToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
             this.StreamToolStripMenuItem.Text = "Strea&m";
             this.StreamToolStripMenuItem.Click += new System.EventHandler(this.StreamToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(118, 6);
             // 
             // CancelToolStripMenuItem
             // 
             this.CancelToolStripMenuItem.Name = "CancelToolStripMenuItem";
-            this.CancelToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.CancelToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
             this.CancelToolStripMenuItem.Text = "Canc&el";
             this.CancelToolStripMenuItem.Click += new System.EventHandler(this.CancelToolStripMenuItem_Click);
             // 
@@ -132,7 +132,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
             this.aboutToolStripMenuItem.Text = "&About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -156,6 +156,7 @@
             this.YourOrderPictureBox.Location = new System.Drawing.Point(31, 136);
             this.YourOrderPictureBox.Name = "YourOrderPictureBox";
             this.YourOrderPictureBox.Size = new System.Drawing.Size(234, 240);
+            this.YourOrderPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.YourOrderPictureBox.TabIndex = 9;
             this.YourOrderPictureBox.TabStop = false;
             // 
@@ -199,9 +200,9 @@
             // 
             // YourOrderGroupBox
             // 
-            this.YourOrderGroupBox.Controls.Add(this.AdditionalChargeTextBox);
-            this.YourOrderGroupBox.Controls.Add(this.AdditionalChargeLabel);
-            this.YourOrderGroupBox.Controls.Add(this.checkBox1);
+            this.YourOrderGroupBox.Controls.Add(this.DVDChargesTextBox);
+            this.YourOrderGroupBox.Controls.Add(this.DVDChargesLabel);
+            this.YourOrderGroupBox.Controls.Add(this.DVDChargesCheckBox);
             this.YourOrderGroupBox.Controls.Add(this.GrandTotalTextBox);
             this.YourOrderGroupBox.Controls.Add(this.GrandTotalLabel);
             this.YourOrderGroupBox.Controls.Add(this.SalesTaxTextBox);
@@ -217,34 +218,34 @@
             this.YourOrderGroupBox.TabStop = false;
             this.YourOrderGroupBox.Text = "Your Order";
             // 
-            // AdditionalChargeTextBox
+            // DVDChargesTextBox
             // 
-            this.AdditionalChargeTextBox.BackColor = System.Drawing.Color.White;
-            this.AdditionalChargeTextBox.ForeColor = System.Drawing.Color.Black;
-            this.AdditionalChargeTextBox.Location = new System.Drawing.Point(134, 77);
-            this.AdditionalChargeTextBox.Name = "AdditionalChargeTextBox";
-            this.AdditionalChargeTextBox.ReadOnly = true;
-            this.AdditionalChargeTextBox.Size = new System.Drawing.Size(100, 23);
-            this.AdditionalChargeTextBox.TabIndex = 19;
+            this.DVDChargesTextBox.BackColor = System.Drawing.Color.White;
+            this.DVDChargesTextBox.ForeColor = System.Drawing.Color.Black;
+            this.DVDChargesTextBox.Location = new System.Drawing.Point(134, 77);
+            this.DVDChargesTextBox.Name = "DVDChargesTextBox";
+            this.DVDChargesTextBox.ReadOnly = true;
+            this.DVDChargesTextBox.Size = new System.Drawing.Size(100, 23);
+            this.DVDChargesTextBox.TabIndex = 19;
             // 
-            // AdditionalChargeLabel
+            // DVDChargesLabel
             // 
-            this.AdditionalChargeLabel.AutoSize = true;
-            this.AdditionalChargeLabel.Location = new System.Drawing.Point(8, 80);
-            this.AdditionalChargeLabel.Name = "AdditionalChargeLabel";
-            this.AdditionalChargeLabel.Size = new System.Drawing.Size(120, 17);
-            this.AdditionalChargeLabel.TabIndex = 18;
-            this.AdditionalChargeLabel.Text = "Additional Charge";
+            this.DVDChargesLabel.AutoSize = true;
+            this.DVDChargesLabel.Location = new System.Drawing.Point(34, 80);
+            this.DVDChargesLabel.Name = "DVDChargesLabel";
+            this.DVDChargesLabel.Size = new System.Drawing.Size(94, 17);
+            this.DVDChargesLabel.TabIndex = 18;
+            this.DVDChargesLabel.Text = "DVD Charges";
             // 
-            // checkBox1
+            // DVDChargesCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(6, 246);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(300, 21);
-            this.checkBox1.TabIndex = 17;
-            this.checkBox1.Text = "Order the DVD (adds $10.00 to your order)";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.DVDChargesCheckBox.AutoSize = true;
+            this.DVDChargesCheckBox.Location = new System.Drawing.Point(6, 246);
+            this.DVDChargesCheckBox.Name = "DVDChargesCheckBox";
+            this.DVDChargesCheckBox.Size = new System.Drawing.Size(300, 21);
+            this.DVDChargesCheckBox.TabIndex = 17;
+            this.DVDChargesCheckBox.Text = "Order the DVD (adds $10.00 to your order)";
+            this.DVDChargesCheckBox.UseVisualStyleBackColor = true;
             // 
             // GrandTotalTextBox
             // 
@@ -420,11 +421,11 @@
         private System.Windows.Forms.Label SalesTaxLabel;
         private System.Windows.Forms.TextBox SubTotalTextBox;
         private System.Windows.Forms.Label SubTotalLabel;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox DVDChargesCheckBox;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button StreamButton;
-        private System.Windows.Forms.TextBox AdditionalChargeTextBox;
-        private System.Windows.Forms.Label AdditionalChargeLabel;
+        private System.Windows.Forms.TextBox DVDChargesTextBox;
+        private System.Windows.Forms.Label DVDChargesLabel;
     }
 }

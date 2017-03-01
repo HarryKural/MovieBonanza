@@ -14,10 +14,27 @@ namespace MovieBonanza
     {
         // Create a reference to the previous form
         public SelectionForm previousForm { get; set; }
+        
+        public string title { get; set; }
+
+        public string category { get; set; }
+
+        public string cost { get; set; }
+
+        public Image image { get; set; }
 
         public OrderForm()
         {
             InitializeComponent();
+            this.ActiveControl = TitleLabel;
+        }
+
+        public void setInfo()
+        {
+            TitleTextBox.Text = title;
+            CategoryTextBox.Text = category;
+            CostTextBox.Text = cost;
+            YourOrderPictureBox.Image = image;
         }
 
         private void _buttonClickHandler(object sender, EventArgs e)
@@ -72,5 +89,6 @@ namespace MovieBonanza
         {
             this.StreamButton.PerformClick();
         }
+        
     }
 }
