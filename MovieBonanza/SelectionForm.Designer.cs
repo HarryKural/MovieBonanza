@@ -40,6 +40,7 @@
             this.TitleLabel = new System.Windows.Forms.Label();
             this.YourSelectionPictureBox = new System.Windows.Forms.PictureBox();
             this.NextButton = new System.Windows.Forms.Button();
+            this.PreviewButton = new System.Windows.Forms.Button();
             this.YourSelectionGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.YourSelectionPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -193,12 +194,25 @@
             this.NextButton.UseVisualStyleBackColor = false;
             this.NextButton.Click += new System.EventHandler(this._NextButton_Click);
             // 
+            // PreviewButton
+            // 
+            this.PreviewButton.BackColor = System.Drawing.Color.White;
+            this.PreviewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.PreviewButton.Location = new System.Drawing.Point(244, 357);
+            this.PreviewButton.Name = "PreviewButton";
+            this.PreviewButton.Size = new System.Drawing.Size(73, 27);
+            this.PreviewButton.TabIndex = 5;
+            this.PreviewButton.Text = "Preview";
+            this.PreviewButton.UseVisualStyleBackColor = false;
+            this.PreviewButton.Click += new System.EventHandler(this.PreviewButton_Click);
+            // 
             // SelectionForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(704, 411);
+            this.ClientSize = new System.Drawing.Size(700, 407);
             this.ControlBox = false;
+            this.Controls.Add(this.PreviewButton);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.YourSelectionGroupBox);
             this.Controls.Add(this.CurrentMoviesListBox);
@@ -234,6 +248,7 @@
         private System.Windows.Forms.Label CostLabel;
         private System.Windows.Forms.TextBox CostTextBox;
         private System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.Button PreviewButton;
     }
 }
 

@@ -231,6 +231,22 @@ namespace MovieBonanza
             // Hide the form
             this.Hide();
         }
-        
+
+        private void PreviewButton_Click(object sender, EventArgs e)
+        {
+            // Instantiate an object to the next form
+            PreviewForm previewForm = new PreviewForm();
+
+            // Pass a reference to the current form to the next form
+            previewForm.previousForm = this;
+
+            PreviewForm.title = TitleTextBox.Text;
+
+            previewForm.url_youTube();
+
+            previewForm.Show();
+
+            this.Hide();
+        }
     } // End of Selection Form class
 } // End of namespace
