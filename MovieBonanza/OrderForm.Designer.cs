@@ -95,7 +95,7 @@
             this.PrintToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
             this.PrintToolStripMenuItem.Tag = "";
             this.PrintToolStripMenuItem.Text = "&Print";
-            this.PrintToolStripMenuItem.Click += new System.EventHandler(this.PrintToolStripMenuItem_Click);
+            this.PrintToolStripMenuItem.Click += new System.EventHandler(this._PrintToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -107,7 +107,7 @@
             this.StreamToolStripMenuItem.Name = "StreamToolStripMenuItem";
             this.StreamToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
             this.StreamToolStripMenuItem.Text = "Strea&m";
-            this.StreamToolStripMenuItem.Click += new System.EventHandler(this.StreamToolStripMenuItem_Click);
+            this.StreamToolStripMenuItem.Click += new System.EventHandler(this._StreamToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -119,7 +119,7 @@
             this.CancelToolStripMenuItem.Name = "CancelToolStripMenuItem";
             this.CancelToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
             this.CancelToolStripMenuItem.Text = "Canc&el";
-            this.CancelToolStripMenuItem.Click += new System.EventHandler(this.CancelToolStripMenuItem_Click);
+            this.CancelToolStripMenuItem.Click += new System.EventHandler(this._CancelToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -135,7 +135,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
             this.aboutToolStripMenuItem.Text = "&About...";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this._aboutToolStripMenuItem_Click);
             // 
             // MovieSelectedGroupBox
             // 
@@ -258,7 +258,7 @@
             this.DVDChargesCheckBox.TabIndex = 17;
             this.DVDChargesCheckBox.Text = "Order the DVD (adds $10.00 to your order)";
             this.DVDChargesCheckBox.UseVisualStyleBackColor = true;
-            this.DVDChargesCheckBox.CheckedChanged += new System.EventHandler(this.DVDChargesCheckBox_CheckedChanged);
+            this.DVDChargesCheckBox.CheckedChanged += new System.EventHandler(this._DVDChargesCheckBox_CheckedChanged);
             // 
             // GrandTotalTextBox
             // 

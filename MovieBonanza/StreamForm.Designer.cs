@@ -46,7 +46,7 @@
             this.OKButton.TabIndex = 7;
             this.OKButton.Text = "OK";
             this.OKButton.UseVisualStyleBackColor = false;
-            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
+            this.OKButton.Click += new System.EventHandler(this._OKButton_Click);
             // 
             // ThankLabel
             // 

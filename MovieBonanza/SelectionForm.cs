@@ -1,4 +1,19 @@
-﻿using System;
+﻿// ______________________________________________________________________________________________
+// App name:           Movie Bonanza
+// Author's name:      Harshit Sharma
+// Student Number#:    200333254
+// App Creation Date:  Feb 27, 2017
+// Last Modified Date: March 05, 2017
+// Professor:          Tom Tsiliopoulos
+// Rapid Application Development - Assignment 3
+// App description:    This is a multi-form application that allows
+//                     user to select a Movie to view from an online video streaming
+//                     service called “Movie Bonanza”. It will calculate the cost + taxes
+//                     of movie according to the movie category, also provides option to buy DVD.
+// ________________________________________________________________________________________________
+
+// using pre-existing libraries
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,23 +30,41 @@ namespace MovieBonanza
         // Create a reference to the previous form
         public Form previousForm;
 
+        // Constructor
         public SelectionForm()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// This method works according to the movie selected from the drop down list.
+        /// Calls the _setInfo method
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _currentMoviesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // when any movie selected it enables the next button
             this.NextButton.Enabled = true;
+
+            // sets the value of title text box = selected movie
             TitleTextBox.Text = CurrentMoviesListBox.Text.ToString();
             _setInfo();
         }
 
+        /// <summary>
+        /// This method sets the value of all textboxes according to the conditions provided
+        /// </summary>
+        /* -----------------------------------------------------------------------------------
+         * This method contains too many if - else. It might be replaced by any
+         * struct, dictionary or something in C# but I was unable to understand that and fix it.
+         * -------------------------------------------------------------------------------------
+         */
         private void _setInfo()
         {
-            /// <summary>
-            /// Sets the category for all the movies
-            /// </summary>
+            /*
+             * Sets the category for all the movies according to each titles
+             */
             if (TitleTextBox.Text == "Footloose" || TitleTextBox.Text == "Real Steel")
             {
                 CategoryTextBox.Text = "New Release";
@@ -64,9 +97,9 @@ namespace MovieBonanza
             }
 
 
-            /// <summary>
-            /// Sets costs
-            /// </summary>
+            /*
+             * Sets the cost of movies according to the category of movie
+             */
             if (CategoryTextBox.Text == "Family")
             {
                 CostTextBox.Text = "$ 0.99";
@@ -84,9 +117,9 @@ namespace MovieBonanza
                 CostTextBox.Text = "$ 1.99";
             }
 
-            /// <summary>
-            /// Sets picture
-            /// </summary>
+            /*
+             * Sets the picture of each movie according to the titles
+             */
             if (TitleTextBox.Text == "Season of the Witch")
             {
                 YourSelectionPictureBox.Image = Properties.Resources.SeasonOfTheWitch;
@@ -167,9 +200,15 @@ namespace MovieBonanza
             {
                 YourSelectionPictureBox.Image = Properties.Resources.RealSteel;
             }
-        }
+        } // End of _setInfo()
 
-        private void NextButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// This method works as event handler for the next button
+        /// and perform its function by taking the user to next form (Order Form).
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void _NextButton_Click(object sender, EventArgs e)
         {
             // Instantiate an object to the next form
             OrderForm orderForm = new OrderForm();
@@ -177,10 +216,13 @@ namespace MovieBonanza
             // Pass a reference to the current form to the next form
             orderForm.previousForm = this;
 
+            // Setting the value of all the variables to their respective textBoxes & pictureBox
             OrderForm.title = TitleTextBox.Text;
             orderForm.category = CategoryTextBox.Text;
             orderForm.cost = CostTextBox.Text;
             orderForm.image = YourSelectionPictureBox.Image;
+
+            // Calling the setInfo method from Order Form
             orderForm.setInfo();
 
             // Show the next form
@@ -190,5 +232,5 @@ namespace MovieBonanza
             this.Hide();
         }
         
-    }
-}
+    } // End of Selection Form class
+} // End of namespace

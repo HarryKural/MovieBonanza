@@ -1,4 +1,19 @@
-﻿using System;
+﻿// ______________________________________________________________________________________________
+// App name:           Movie Bonanza
+// Author's name:      Harshit Sharma
+// Student Number#:    200333254
+// App Creation Date:  Feb 27, 2017
+// Last Modified Date: March 05, 2017
+// Professor:          Tom Tsiliopoulos
+// Rapid Application Development - Assignment 3
+// App description:    This is a multi-form application that allows
+//                     user to select a Movie to view from an online video streaming
+//                     service called “Movie Bonanza”. It will calculate the cost + taxes
+//                     of movie according to the movie category, also provides option to buy DVD.
+// ________________________________________________________________________________________________
+
+// using pre-existing libraries
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -15,10 +30,10 @@ namespace MovieBonanza
         {
             InitializeComponent();
             this.Text = String.Format("About {0}", AssemblyTitle);
-            this.labelProductName.Text = AssemblyProduct;
-            this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
-            this.labelCopyright.Text = AssemblyCopyright;
-            this.labelCompanyName.Text = AssemblyCompany;
+            this.ProgrammerNameLabel.Text = AssemblyProduct;
+            this.VersionLabel.Text = String.Format("Version {0}", AssemblyVersion);
+            this.WebsiteLabel.Text = AssemblyCopyright;
+            this.ContactNumberLabel.Text = AssemblyCompany;
             this.textBoxDescription.Text = AssemblyDescription;
         }
 
